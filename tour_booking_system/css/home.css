@@ -1,0 +1,103 @@
+/* Custom styles for Tour Management System */
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/main.jpg") center / cover no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero .btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+  
+  /* Tour cards */
+  .tour-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .tour-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .tour-card img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .price-tag {
+    font-size: 1.25rem;
+    color: #198754;
+  }
+  
+  /* Section headings */
+  section h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+  
+  section h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0d6efd;
+  }
+  
+  /* Testimonials */
+  .blockquote {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #0d6efd;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blockquote p {
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+  
+  .blockquote-footer {
+    font-weight: 600;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      height: 400px;
+    }
+  
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  

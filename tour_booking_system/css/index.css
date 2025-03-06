@@ -1,0 +1,84 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #4a90e2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #4a90e2;
+}
+
+header h1 {
+    color: black;
+    font-size: 28px;
+}
+
+header h1 span {
+    color: #4caf50;
+}
+
+.secure {
+    color: #4a90e2;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #4caf50;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Banner Section */
+/* .banner {
+    background: url('images/Nepal.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+} */
