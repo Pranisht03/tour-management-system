@@ -26,9 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
     }
 
     // Insert booking into database
-    $sql = "INSERT INTO tblbooking (PackageId, UserEmail, FromDate, ToDate, Comment, status) VALUES (?, ?, ?, ?, ?, ?)";
+    $status = "Pending"; // Or any default value like "Confirmed", "Pending", etc.
+
+    $sql = "INSERT INTO tblbooking (PackageId, UserEmail, FromDate, ToDate, Comment, status) 
+            VALUES (?, ?, ?, ?, ?, ?)";
+
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("issss", $packageId, $userEmail, $fromDate, $toDate, $comment);
+    $stmt->bind_param("isssss", $packageId, $userEmail, $fromDate, $toDate, $comment, $status);
+
+    // $sql = "INSERT INTO tblbooking (PackageId, UserEmail, FromDate, ToDate, Comment, status) VALUES (?, ?, ?, ?, ?, ?)";
+    // $stmt = $conn->prepare($sql);
+    // $stmt->bind_param("issss", $packageId, $userEmail, $fromDate, $toDate, $comment);
     
     if ($stmt->execute()) {
         echo "<script>alert('Booking successful!'); window.location.href='packages.php';</script>";

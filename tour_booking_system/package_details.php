@@ -73,6 +73,21 @@ $userLoggedIn = isset($_SESSION['email']);
                             <label for="to_date" class="form-label">To Date</label>
                             <input type="date" name="to_date" class="form-control" required>
                         </div>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+                            
+                                let fromDate = document.getElementById("from_date");
+                                let toDate = document.getElementById("to_date");
+                            
+                                // Set min date to today
+                                fromDate.min = today;
+                            
+                                fromDate.addEventListener("change", function () {
+                                    toDate.min = fromDate.value; // Set "To Date" minimum value based on "From Date"
+                                });
+                            });
+                            </script>
                         <div class="mb-3">
                             <label for="comment" class="form-label">Comment</label>
                             <textarea name="comment" class="form-control"></textarea>

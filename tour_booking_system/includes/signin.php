@@ -20,7 +20,8 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary w-100">Sign In</button>
-            <a href="../home.php">Back To Home</a>
+            <a href="../home.php">Back To Home</a><br>
+            <p>Don't have an account? <a href="signup.php">SignUp</a></p>
         </form>
     </div>
 

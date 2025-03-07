@@ -44,7 +44,7 @@
                                 <h4 class="card-title"><?php echo $row['name']; ?></h4>
                                 <p class="card-text"><?php echo $row['features']; ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="price-tag fw-bold">$<?php echo number_format($row['price'], 2); ?></span>
+                                    <span class="price-tag fw-bold">NPR <?php echo number_format($row['price'], 2); ?></span>
                                     <a href="packages.php" class="btn btn-primary rounded-pill px-4">Book Now</a>
                                 </div>
                             </div>

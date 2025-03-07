@@ -65,7 +65,7 @@ $result = $conn->query($query);
                             ?>
                         </td>
                         <td>
-                            <?php if ($row['status'] == 0): ?>
+                            <?php if ($row['status'] == "Pending"): ?>
                                 <form action="confirm_booking.php" method="POST">
                                     <input type="hidden" name="booking_id" value="<?php echo $row['BookingId']; ?>">
                                     <button type="submit" name="confirm_booking" class="btn btn-success btn-sm">Confirm</button>

@@ -30,7 +30,7 @@
             </div>
             <button type="submit" class="btn btn-primary w-100">Sign Up</button>
             <a href="../home.php">Back To Home</a>
-
+            <p>Already Have an Account.<a href="signin.php">Sign In </a></p>
         </form>
     </div>
 

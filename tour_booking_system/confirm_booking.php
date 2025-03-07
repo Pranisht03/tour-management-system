@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm_booking'])) {
 
     if ($stmt->execute()) {
         echo "<script>alert('Booking Confirmed!'); window.location.href='admin_bookings.php';</script>";
+        header("Location: admin_manage_booking.php");
     } else {
         echo "<script>alert('Failed to confirm booking. Please try again.'); window.location.href='admin_bookings.php';</script>";
     }
