@@ -1,3 +1,3 @@
  <-----Admin Login Credentials--------->
  username: admin
- password: passsword123
+ password: admin123

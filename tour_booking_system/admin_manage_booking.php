@@ -1,17 +1,14 @@
 <?php
     include 'admin_panel.php';
     include 'db_connection.php';
-
 ?>
 
 <?php
-
-// Fetch all bookings
-$query = "SELECT b.BookingId, b.PackageId, b.UserEmail, b.FromDate, b.ToDate, b.Comment, b.status, p.name AS PackageName
+// Fetch all bookings, including numofpeople column
+$query = "SELECT b.BookingId, b.PackageId, b.UserEmail, b.FromDate, b.ToDate, b.Comment, b.status, b.numofpeople, p.name AS PackageName
           FROM tblbooking b
           JOIN tour_packages p ON b.PackageId = p.id
           ORDER BY b.BookingId DESC";
-          
 
 $result = $conn->query($query);
 ?>
@@ -27,7 +24,7 @@ $result = $conn->query($query);
         .custom-margin {
           margin-left: 270px; 
         }
-</style>
+    </style>
 </head>
 <body>
     <div class="container mt-5 pt-5 custom-margin">
@@ -39,7 +36,8 @@ $result = $conn->query($query);
                     <th>User Email</th>
                     <th>From Date</th>
                     <th>To Date</th>
-                    <th>Comment</th>
+                    <th>Number Of People</th>
+                    <th>Message</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -52,6 +50,7 @@ $result = $conn->query($query);
                         <td><?php echo htmlspecialchars($row['UserEmail']); ?></td>
                         <td><?php echo htmlspecialchars($row['FromDate']); ?></td>
                         <td><?php echo htmlspecialchars($row['ToDate']); ?></td>
+                        <td><?php echo htmlspecialchars($row['numofpeople']); ?></td> <!-- Display the numofpeople column -->
                         <td><?php echo htmlspecialchars($row['Comment']); ?></td>
                         <td>
                             <?php
@@ -83,4 +82,3 @@ $result = $conn->query($query);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

@@ -7,7 +7,7 @@ include 'includes/config.php';
 if (isset($_POST['submit1'])) {
     if (!isset($_SESSION['user_id'])) {
         $_SESSION['error'] = "You must be logged in to submit an enquiry.";
-        header("Location: login.php"); 
+        header("Location: enquiry.php"); 
         exit();
     }
 

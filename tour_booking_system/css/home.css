@@ -1,16 +1,6 @@
 /* Custom styles for Tour Management System */
 
 /* Hero section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/main.jpg") center / cover no-repeat;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
   
   .hero h2 {
     font-size: 3rem;

@@ -63,41 +63,71 @@ $userLoggedIn = isset($_SESSION['email']);
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="booking_handler.php">
+                    <form method="POST" action="booking_handler.php" onsubmit="return validateForm()">
                         <input type="hidden" name="package_id" value="<?php echo $package['id']; ?>">
+                        
                         <div class="mb-3">
                             <label for="from_date" class="form-label">From Date</label>
-                            <input type="date" name="from_date" class="form-control" required>
+                            <input type="date" id="from_date" name="from_date" class="form-control" required>
                         </div>
+                        
                         <div class="mb-3">
                             <label for="to_date" class="form-label">To Date</label>
-                            <input type="date" name="to_date" class="form-control" required>
+                            <input type="date" id="to_date" name="to_date" class="form-control" required>
                         </div>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function () {
-                                let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
-                            
-                                let fromDate = document.getElementById("from_date");
-                                let toDate = document.getElementById("to_date");
-                            
-                                // Set min date to today
-                                fromDate.min = today;
-                            
-                                fromDate.addEventListener("change", function () {
-                                    toDate.min = fromDate.value; // Set "To Date" minimum value based on "From Date"
-                                });
-                            });
-                            </script>
+
                         <div class="mb-3">
-                            <label for="comment" class="form-label">Comment</label>
+                            <label for="num_people" class="form-label">Number of People</label>
+                            <input type="number" id="num_people" name="num_people" class="form-control" min="1" value="1" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Message</label>
                             <textarea name="comment" class="form-control"></textarea>
                         </div>
+                        
                         <button type="submit" name="submit_booking" class="btn btn-success">Confirm Booking</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+
+            let fromDate = document.getElementById("from_date");
+            let toDate = document.getElementById("to_date");
+            let numPeople = document.getElementById("num_people");
+
+            // Set min date to today
+            fromDate.min = today;
+            toDate.min = today;
+
+            fromDate.addEventListener("change", function () {
+                toDate.min = fromDate.value; // Set "To Date" minimum value based on "From Date"
+            });
+
+            function validateForm() {
+                let errorMessage = "";
+
+                if (fromDate.value < today) {
+                    errorMessage = "From Date cannot be in the past!";
+                } else if (toDate.value < fromDate.value) {
+                    errorMessage = "To Date must be after From Date!";
+                } else if (numPeople.value < 1) {
+                    errorMessage = "Number of people must be at least 1!";
+                }
+
+                if (errorMessage) {
+                    alert(errorMessage);
+                    return false;
+                }
+                return true;
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

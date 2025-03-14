@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_booking'])) {
     // $stmt->bind_param("issss", $packageId, $userEmail, $fromDate, $toDate, $comment);
     
     if ($stmt->execute()) {
-        echo "<script>alert('Booking successful!'); window.location.href='packages.php';</script>";
+        echo "<script>alert('Booking successful!'); window.location.href='my_bookings.php';</script>";
     } else {
         echo "<script>alert('Booking failed. Please try again.');</script>";
     }

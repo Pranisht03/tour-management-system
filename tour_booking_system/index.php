@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start session to check if user is logged in
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ session_start(); // Start session to check if user is logged in
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism Management System</title>
+    <title>Tour Management System</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@ session_start(); // Start session to check if user is logged in
 
     <!-- Header Section -->
     <header>
-        <h1><span>Tourism</span> Management System</h1>
+        <h1><span>Tour</span> Management System</h1>
         <div class="secure">
         <i class="fa-solid fa-lock"></i> SAFE & SECURE
         </div>
@@ -71,7 +71,7 @@ session_start(); // Start session to check if user is logged in
                 <img src="images/main.jpg" class="d-block w-100" alt="Image 1">
             </div>
             <div class="carousel-item">
-                <img src="images/mountain.jpg" class="d-block w-100" alt="Image 2">
+                <img src="images/nature.jpg" class="d-block w-100" alt="Image 2">
             </div>
             <div class="carousel-item">
                 <img src="images/mountain2.jpg" class="d-block w-100" alt="Image 3">

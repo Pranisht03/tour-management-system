@@ -62,3 +62,7 @@ CREATE TABLE tblbooking (
   FOREIGN KEY (`UserEmail`) REFERENCES `tblusers`(`EmailId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE tblbooking 
+ADD COLUMN numofpeople INT NOT NULL DEFAULT 1;
+
+ALTER TABLE users AUTO_INCREMENT = 1;
