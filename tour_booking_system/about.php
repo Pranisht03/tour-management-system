@@ -64,7 +64,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="images/boudha.jpg" alt="Tour Management Image" class="about-image">
+                    <img src="images/himalayanyak.jpg" alt="Tour Management Image" class="about-image">
                 </div>
             </div>
         </div>

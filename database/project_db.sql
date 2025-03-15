@@ -28,8 +28,6 @@ CREATE TABLE tblusers (
     UpdationDate TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO tblusers (FullName, MobileNumber, EmailId, Password, RegDate) VALUES
-('Anuj kumar', '1111111111', 'anuj@gmail.com', 'examplehashedpassword', '2017-05-10 10:38:17');
 
 CREATE TABLE tblenquiry (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -42,9 +40,6 @@ CREATE TABLE tblenquiry (
     Status TINYINT(1) DEFAULT 0 -- Use enum or documentation to indicate meaning of statuses
 );
 
--- Dumping data for table tblenquiry
-INSERT INTO tblenquiry (FullName, EmailId, MobileNumber, Subject, Description, PostingDate) VALUES
-('Test', 'test@gm.com', '4747474747', 'Test', 'Sample description text here.', '2017-05-14 07:54:07');
 
 CREATE TABLE tblbooking (
   BookingId int(11) NOT NULL AUTO_INCREMENT,

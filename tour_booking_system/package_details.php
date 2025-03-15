@@ -40,7 +40,7 @@ $userLoggedIn = isset($_SESSION['email']);
         <p><strong>Package Type:</strong> <?php echo htmlspecialchars($package['type']); ?></p>
         <p><strong>Package Location:</strong> <?php echo htmlspecialchars($package['location']); ?></p>
         <p><strong>Features:</strong> <?php echo htmlspecialchars($package['features']); ?></p>
-        <h3>Price: NPR <?php echo htmlspecialchars($package['price']); ?></h3>
+        <h3>Price: NPR <?php echo htmlspecialchars($package['price']); ?> Per Person</h3>
 
         <!-- Book Now Button -->
         <?php if ($userLoggedIn): ?>

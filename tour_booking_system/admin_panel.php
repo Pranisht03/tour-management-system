@@ -33,8 +33,8 @@
   </div>
 
 
-  <div class="content">
-    <h1>Tourism Management System</h1>
+  <div class="content"> 
+    <h1>Tour Management System</h1>
     <span>Welcome Administrator</span>
   </div> 
 
